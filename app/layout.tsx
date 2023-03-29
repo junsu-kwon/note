@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import './globals.css';
+import { Metadata } from "next"
 import styles from './layout.module.css';
 
-export const metadata = {
+export const metadata : Metadata = {
   title: '멋진 제품 사이트',
   description: '멋진 제품을 판매하는 곳입니다.',
   icons: {
-    icon: './favicon.ico',
+    // icon: './faviconTest.ico', 13.2 버전부터는 app폴더에 있는 favicon을 자동으로 인식하여 추가된다.
   },
 };
 
