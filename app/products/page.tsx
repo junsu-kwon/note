@@ -2,14 +2,13 @@ import { getProducts } from '@/service/products';
 import Link from 'next/link';
 import styles from './page.module.css';
 
-// export const revalidate = 3;
+// export const revalidate = 0;
 
 export default async function ProductsPage() {
-  console.log("products 서버컴포넌트");
+  console.log('products 서버컴포넌트');
   const products = await getProducts();
   const res = await fetch('https://meowfacts.herokuapp.com', {
-    next: { revalidate: 0 },
-    // cache : 'no-store'
+    next: { revalidate: 7 },
   });
   const data = await res.json();
   const factText = data.data[0];
