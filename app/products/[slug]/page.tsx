@@ -1,3 +1,4 @@
+import { getProduct, getProducts } from '@/service/products';
 import { notFound } from 'next/navigation';
 
 type Props = {
@@ -6,11 +7,15 @@ type Props = {
   };
 };
 
-export default function PantsPage({ params }: Props) {
-  if (params.slug === 'nothing') {
+export default async function ProductPage({ params: { slug } }: Props) {
+  console.log("product 서버컴포넌트");
+  const product = await getProduct(slug);
+
+  if (!product) {
     notFound();
   }
-  return <h1>{params.slug} 제품 설명 페이지</h1>;
+
+  return <h1>{product.name} 제품 설명 페이지</h1>;
 }
 
 export function generateMetadata({ params }: Props) {
@@ -19,9 +24,9 @@ export function generateMetadata({ params }: Props) {
   };
 }
 
-export function generateStaticParams() {
-  const products = ['pants', 'skirt'];
-  return products.map((product) => ({
-    slug: product,
+export async function generateStaticParams() {
+  const products = await getProducts();
+  return products.map(({ id }) => ({
+    slug: id,
   }));
 }
