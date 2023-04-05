@@ -3,6 +3,5 @@ import { NextResponse } from 'next/server';
 
 export async function GET(request: Request) {
   const products = await getProducts();
-  // return new Response(JSON.stringify(products));
-  return NextResponse.json(products);
+  return NextResponse.json({ products });
 }
