@@ -12,6 +12,7 @@ export default async function ProductsPage() {
   return (
     <>
       <h1>제품 목록 페이지</h1>
+      <Image src="/products/pants.jpg" alt="nextjs"  width={200} height={200}/>
       <Image src={img} alt="nextjs" width={200} height={200} />
       <Image
         src="https://images.unsplash.com/photo-1441986300917-64674bd600d8"

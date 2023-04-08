@@ -2,21 +2,25 @@
   {
     "id": "1234",
     "name": "청바지",
-    "price": 5000
+    "price": 5000,
+    "image" : "/products/pants.jpg"
   },
   {
     "id": "1235",
     "name": "치마",
-    "price": 6000
+    "price": 6000,
+    "image" : "/products/skirt.jpg"
   },
   {
     "id": "1236",
     "name": "티셔츠",
-    "price": 7000
+    "price": 7000,
+    "image" : "/products/shirts.jpg"
   },
   {
     "id": "1237",
     "name": "스카프",
-    "price": 8000
+    "price": 8000,
+    "image" : "/products/scarf.jpg"
   }
 ]
