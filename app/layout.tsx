@@ -1,9 +1,15 @@
 import Link from 'next/link';
 import './globals.css';
-import { Metadata } from "next"
+import { Metadata } from 'next';
 import styles from './layout.module.css';
 
-export const metadata : Metadata = {
+import { Open_Sans } from 'next/font/google';
+import { Nanum_Gothic } from 'next/font/google';
+
+const sans = Open_Sans({ subsets: ['latin'] });
+const gothic = Nanum_Gothic({ weight: '700', subsets: ['latin'] });
+
+export const metadata: Metadata = {
   title: '멋진 제품 사이트',
   description: '멋진 제품을 판매하는 곳입니다.',
   icons: {
@@ -17,10 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className={sans.className}>
       <body>
         <header className={styles.header}>
-          <h1>Demo Note</h1>
+          <h1 className={gothic.className}>Demo Note</h1>
           <nav className={styles.nav}>
             <Link href="/products">Products</Link>
             <Link href="/about">About</Link>
