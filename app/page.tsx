@@ -4,7 +4,7 @@ export default function Home() {
   console.log('main 서버컴포넌트');
   return (
     <>
-      <h1>메인 ver 5 </h1>
+      <h1>메인 테스트입니다. </h1>
       <Counter />
     </>
   );
