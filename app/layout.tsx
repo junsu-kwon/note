@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="ko" className={sans.className}>
       <body>
         <header className={styles.header}>
-          <h1 className={gothic.className}>Demo Note</h1>
+          <h1 className={gothic.className}>Demo Note 수정했습니다</h1>
           <nav className={styles.nav}>
             <Link href="/products">Products</Link>
             <Link href="/about">About</Link>
